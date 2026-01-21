@@ -1,10 +1,8 @@
 import promptSync from "prompt-sync";
 const prompt = promptSync();
 
-// Exchange rate for EUR/USD (How much 1 EUR is in USD)
 const EUR_USD_RATE = 1.1643;
 
-// Menu display
 console.log("Hello and welcome to the currency converter. Please choose: ");
 console.log("1: Convert EUR to USD");
 console.log("2: Convert USD to EUR");
@@ -14,7 +12,6 @@ const menuSelection = prompt("Select your option [1, 2, or 3]: ");
 console.log("\n");
 
 if (menuSelection === "1") {
-  // EUR → USD
   const eurAmountInput = prompt("Enter amount in EUR: ");
   const eurAmountNum = Number(eurAmountInput);
 
@@ -30,7 +27,6 @@ if (menuSelection === "1") {
     );
   }
 } else if (menuSelection === "2") {
-  // USD → EUR
   const usdAmountInput = prompt("Enter amount in USD: ");
   const usdAmountNum = Number(usdAmountInput);
 
@@ -46,9 +42,7 @@ if (menuSelection === "1") {
     );
   }
 } else if (menuSelection === "3") {
-  // Display current exchange rate
   console.log(`The current exchange rate is 1 EUR = ${EUR_USD_RATE} USD.`);
 } else {
-  // Invalid option
   console.log("Invalid selection. Please choose 1, 2, or 3.");
 }
